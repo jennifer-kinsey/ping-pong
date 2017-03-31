@@ -1,11 +1,11 @@
-#resultsContainer, #secondary{
+#resultsContainer {
   display: none;
 }
 
-.alert{
+.alert {
   color: red;
 }
 
-h1, h2{
+h1, h2 {
   text-align: center;
 }

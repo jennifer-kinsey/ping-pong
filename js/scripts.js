@@ -1,5 +1,4 @@
  // *********************BUSINESS LOGIC*************************
-    //make an an array out of the numbers
 
     var resultArray = [];
     var pingNum = 3;
@@ -51,12 +50,9 @@
   // *********************FRONT END LOGIC*************************
   $(function() {
 
-    //submit form function
-    $("form#submit-button").submit(function(event) {
+    $("form").submit(function(event) {
       event.preventDefault();
-      alert("here");
       var userInput = $("#userInput").val();
-
 
       if(userInput.match(/\D/) || userInput===""){
         $(".alert").append("Please try again and enter in only a numerical value.")
@@ -87,23 +83,31 @@
       $("#secondary").show();
     });
 
-    //change of rules handler
+    //change of ping number handler
     $("#ping").change(function(){
       pingNum = parseInt($("#ping").val());
       pingPongNum = pingNum*pongNum;
       $("#ping-pong-number").text(pingPongNum);
     });
 
-    //change of rules handler
+    //change of pong number handler
     $("#pong").change(function(){
       pongNum = parseInt($("#pong").val());
       pingPongNum = pingNum*pongNum;
       $("#ping-pong-number").text(pingPongNum);
     });
 
-    //change ping word
+    //change of ping word handler
+    $("#pingWord").change(function(){
+      pingWord = $("ping-word").val();
+      $("#ping-word-fill").text(pingWord);
+    });
 
-    //change pong word
+    //change of pong word handler
+    $("#pongWord").change(function(){
+      pongWord = $("pong-word").val();
+      $("#pong-word-fill").text(pongWord);
+    });
 
 
   });

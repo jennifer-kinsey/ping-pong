@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Ping Pong</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.2.0.min.js"></script>
     <script src="js/scripts.js" charset="utf-8"></script>
   </head>
   <body>
@@ -14,35 +14,30 @@
     </div>
     <div class="container">
       <form>
-        <div id="main">
-          <h2>Let's Play PING PONG!</h2>
-          <h3>Rules:</h3>
-          <ol>
-            <li>Numbers divisible by this number become "ping":  <input type="number" class="variable-numbers" id="ping" placeholder="3"> </li>
-            <li>Numbers divisible by this number become "pong":  <input type="number" class="variable-numbers" id="pong" placeholder="5"> </li>
-            <li>Numbers divisible by <span id="ping-pong-number">15</span> become "ping-pong"</li>
-            <li>Enter the number you want to reach: <input type="number" id="userInput"></li>
-          </ol>
-          <button type="click" id="change" class="btn btn-primary">Click here to change the ping pong words</button>
-        </div>
-        <div id="secondary">
-          <ol>
-            <li>What word should be "ping"?  <input type="text" id="ping-word"> </li>
-            <li>What word should be "pong"?  <input type="text" id="pong-word"> </li>
-            <p> If no word is entered, it will default to "ping" and/or "pong".
-          </ol>
-          <!-- <button type="submit" class="submit-button" class="btn btn-success">Submit</button> -->
-        </div>
-        <button type="submit" id="submit-button" class="btn btn-success">Submit as is!</button>
+        <h2>Let's Play PING PONG!</h2>
+        <h3>Rules:</h3>
+        <ol>
+          <li>Numbers divisible by this number become "<span id="ping-word-fill">ping</span>":  <input type="number" class="variable-numbers" id="ping" placeholder="3"> </li>
+          <li>Numbers divisible by this number become "<span id="pong-word-fill">pong"</span>:  <input type="number" class="variable-numbers" id="pong" placeholder="5"> </li>
+          <li>Numbers divisible by <span id="ping-pong-number">15</span> become "ping-pong"</li>
+          <li>Enter the number you want to reach: <input type="number" id="userInput"></li>
+        </ol>
+        <h3>Change it up More:</h3>
+        <ol>
+          <li>What word should be "ping"?  <input type="text" id="ping-word"> </li>
+          <li>What word should be "pong"?  <input type="text" id="pong-word"> </li>
+          <p><em> If no word is entered, it will default to "ping" and/or "pong".</em></p>
+        </ol>
+        <button type="submit" id="submit-button" class="btn btn-success">Submit</button>
       </form>
       <div id="resultsContainer">
         <h3>Ping Pong Result</h3>
         <h4 class="alert"></h4>
           <div id="ping-pong-container">
-            <p> Your result is:</p>
+            <h4> Your result is:</h4>
             <ul id="ping-pong-result"></ul>
           </div>
-        <button type="click" class="btn btn-danger" id="reload">RELOAD!</button>
+        <button type="button" class="btn btn-danger" id="reload">RELOAD!</button>
       </div>
     </div>
   </body>
