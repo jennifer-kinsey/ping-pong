@@ -1,7 +1,11 @@
-#resultsContainer {
+#resultsContainer, #secondary{
   display: none;
 }
 
 .alert{
   color: red;
+}
+
+h1, h2{
+  text-align: center;
 }

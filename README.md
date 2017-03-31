@@ -27,9 +27,19 @@ _4) If a number is divisible by 15, it will return the word "ping-pong"_
 * _Input: 17_
 * _Output: ...14, ping-pong, 16, 17_
 
-_5) A non-numerical input is rejected
+_5) A non-numerical input is rejected_
 * _Input: 17A, jhf_
 * _Output: Please try again with a numerical value_
+
+_6) User can dictate their ping, pong, and therefore their ping-pong interval. However, 3, 5, and 15 are the respective defaults._
+* _Input: 2(ping),3(pong), (ping-pong becomes 3), 10 (length)_
+* _Output: 1, ping, pong, ping, 5, ping-pong, 7, ping, pong, ping_
+
+
+_7) User can dictate their ping pong words._
+* _Input: ping is "leggo", pong is "eggo", ping-pong is "leggo-eggo", 2(ping),3(pong), (ping-pong becomes 3), 10 (length)_
+* _Output: 1, leggo, eggo, leggo, 5, leggo-eggo, 7, leggo, eggo, leggo_
+
 
 
 ## Setup/Installation Requirements

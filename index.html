@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="js/scripts.js" charset="utf-8"></script>
-
   </head>
   <body>
     <div class="jumbotron">
@@ -15,15 +14,26 @@
     </div>
     <div class="container">
       <form>
-        <h2>Let's Play PING PONG!</h2>
-        <h3>Rules:</h3>
-        <ol>
-          <li>Numbers divisible by this number become "ping":  <input type="number" class="variable-numbers" id="ping" placeholder="3"> </li>
-          <li>Numbers divisible by this number become "pong":  <input type="number" class="variable-numbers" id="pong" placeholder="5"> </li>
-          <li>Numbers divisible by <span id="ping-pong-number">15</span> become "ping-pong"</li>
-        </ol>
-        <input type="text" id="userInput"><br>
-        <button type="submit" class="btn btn-info">Submit</button>
+        <div id="main">
+          <h2>Let's Play PING PONG!</h2>
+          <h3>Rules:</h3>
+          <ol>
+            <li>Numbers divisible by this number become "ping":  <input type="number" class="variable-numbers" id="ping" placeholder="3"> </li>
+            <li>Numbers divisible by this number become "pong":  <input type="number" class="variable-numbers" id="pong" placeholder="5"> </li>
+            <li>Numbers divisible by <span id="ping-pong-number">15</span> become "ping-pong"</li>
+            <li>Enter the number you want to reach: <input type="number" id="userInput"></li>
+          </ol>
+          <button type="click" id="change" class="btn btn-primary">Click here to change the ping pong words</button>
+        </div>
+        <div id="secondary">
+          <ol>
+            <li>What word should be "ping"?  <input type="text" id="ping-word"> </li>
+            <li>What word should be "pong"?  <input type="text" id="pong-word"> </li>
+            <p> If no word is entered, it will default to "ping" and/or "pong".
+          </ol>
+          <!-- <button type="submit" class="submit-button" class="btn btn-success">Submit</button> -->
+        </div>
+        <button type="submit" id="submit-button" class="btn btn-success">Submit as is!</button>
       </form>
       <div id="resultsContainer">
         <h3>Ping Pong Result</h3>
@@ -35,7 +45,5 @@
         <button type="click" class="btn btn-danger" id="reload">RELOAD!</button>
       </div>
     </div>
-
-
   </body>
 </html>
