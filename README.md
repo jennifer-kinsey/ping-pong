@@ -1,0 +1,58 @@
+# _Ping Pong_
+
+####
+
+#### By _Jennifer Kinsey_
+
+## Description
+
+_This website takes a user inputted numerical value, counts from 1 to that value back, and replaces number divisible by 3 with "ping, numbers divisible by 5 with "pong", and number divisible by 15 with "ping pong"._
+
+## _Specifications_
+
+_1) If you input a number it will return all the numbers inputted from 1 to that number_
+* _Input: 6_
+* _Output: 1, 2, 3, 4, 5, 6_
+
+_2) If a number is divisible by 3, it will return the word "ping" in place of that number_
+* _Input: 6_
+* _Output: 1, 2, ping, 4, 5, ping_
+
+
+_3) If a number is divisible by 5, it will return the word "pong" in place of that number_
+* _Input: 6_
+* _Output: 1, 2, ping, 4, pong, ping_
+
+_4) If a number is divisible by 15, it will return the word "ping-pong"_
+* _Input: 17_
+* _Output: ...14, ping-pong, 16, 17_
+
+
+## Setup/Installation Requirements
+
+* _Ensure internet connection_
+* _Open Terminal_
+* _Change into the desktop directory ('cd desktop')_
+* _Run "git clone  https://github.com/jennifer-kinsey/ping-pong.git"_
+* _Open 'ping-pong' folder in desktop_
+* _Open 'index.html' file_
+
+## Known Bugs
+
+_There are no known bugs at this time._
+
+## Github Pages link
+
+http://jennifer-kinsey.github.io/ping-pong
+
+## Support and contact details
+
+_Please contact Kinsey at kinseyplusplus@gmail.com if you have any questions or need any support._
+
+## Technologies Used
+
+_Webpage is built with HTML, CSS (specifically using a default bootstrap.css file/framework with minimal styling), JavaScript, and the jQuery3.2.0 files/framework. Jennifer Kinsey and Epicodus are not liable for anything._
+
+### License
+
+_Copyright (c) 2017 Jennifer Kinsey. This software is licensed under the MIT license._
