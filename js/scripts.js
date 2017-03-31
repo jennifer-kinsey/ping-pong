@@ -4,7 +4,7 @@
     var pingNum = 3;
     var pongNum = 5;
     var pingPongNum = 15;
-    var defaultLength = 20;
+    var userInput = "20";
     var pingWord = "ping";
     var pongWord = "pong";
     var pingPongWord = pingWord + "-" + pongWord;
@@ -47,16 +47,17 @@
 
 
 
-
-
   // *********************FRONT END LOGIC*************************
   $(function() {
 
     $("form").submit(function(event) {
       event.preventDefault();
-      var userInput = $("#userInput").val();
 
-      if(userInput.match(/\D/) || userInput===""){
+      if($("#userInput").val() !== ""){
+        userInput = $("#userInput").val();
+      }
+
+      if(userInput.match(/\D/) || userInput ===""){
         $(".alert").append("Please try again and enter in only a numerical value.")
         $("#ping-pong-container").hide();
       }else{
