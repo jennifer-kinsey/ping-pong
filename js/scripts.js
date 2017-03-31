@@ -7,10 +7,38 @@
       for(var i = 0; i <= input; i++){
         resultArray.push(i);
       }
+      pingIt(resultArray);
+    }
+
+    var pingIt = function(resultArray){
+      for(var i = 0; i < resultArray.length; i++){
+        if(i  % 3 === 0){
+          resultArray[i] = "ping";
+        }
+      }
+      pongIt(resultArray);
+    }
+
+    var pongIt = function(resultArray){
+      for(var i = 0; i < resultArray.length; i++){
+        if(i  % 5 === 0){
+          resultArray[i] = "pong";
+        }
+      }
+      pingPongIt(resultArray);
+    }
+
+    var pingPongIt = function(resultArray){
+      for(var i = 0; i < resultArray.length; i++){
+        if(i  % 15 === 0){
+          resultArray[i] = "ping-pong";
+        }
+      }
+      resultArray = resultArray.shift();
       return resultArray;
     }
 
-    var replaceThird
+
 
 
 
@@ -23,7 +51,8 @@
       var userInput = parseInt($("#userInput").val());
 
       makeArray(userInput);
-      console.log(resultArray);
+
+      $("#ping-pong-result").text(resultArray);
 
       $("form").hide();
       $("#result").show();
