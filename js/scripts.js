@@ -2,6 +2,9 @@
     //make an an array out of the numbers
 
     var resultArray = [];
+    var pingNum = 3;
+    var pongNum = 5;
+    var pingPongNum = 15;
 
     var makeArray = function(input){
       for(var i = 0; i <= input; i++){
@@ -12,7 +15,7 @@
 
     var pingIt = function(resultArray){
       for(var i = 0; i < resultArray.length; i++){
-        if(i  % 3 === 0){
+        if(i  % pingNum === 0){
           resultArray[i] = "ping";
         }
       }
@@ -21,7 +24,7 @@
 
     var pongIt = function(resultArray){
       for(var i = 0; i < resultArray.length; i++){
-        if(i  % 5 === 0){
+        if(i  % pongNum === 0){
           resultArray[i] = "pong";
         }
       }
@@ -30,7 +33,7 @@
 
     var pingPongIt = function(resultArray){
       for(var i = 0; i < resultArray.length; i++){
-        if(i  % 15 === 0){
+        if(i  % pingPongNum === 0){
           resultArray[i] = "ping-pong";
         }
       }
@@ -49,6 +52,7 @@
     $("form").submit(function(e) {
       e.preventDefault();
       var userInput = $("#userInput").val();
+
 
       if(userInput.match(/\D/)){
         $(".alert").append("Please try again and enter in only a numerical value.")
@@ -71,6 +75,20 @@
     //reload button function
     $("#reload").click(function(){
       location.reload();
+    });
+
+    //change of rules handler
+    $("#ping").change(function(){
+      pingNum = parseInt($("#ping").val());
+      pingPongNum = pingNum*pongNum;
+      $("#ping-pong-number").text(pingPongNum);
+    });
+
+    //change of rules handler
+    $("#pong").change(function(){
+      pongNum = parseInt($("#pong").val());
+      pingPongNum = pingNum*pongNum;
+      $("#ping-pong-number").text(pingPongNum);
     });
 
 
