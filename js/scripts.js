@@ -22,21 +22,9 @@
         if(i  % pingNum === 0){
           resultArray[i] = pingWord;
         }
-      }
-      pongIt(resultArray);
-    }
-
-    var pongIt = function(resultArray){
-      for(var i = 0; i < resultArray.length; i++){
         if(i  % pongNum === 0){
           resultArray[i] = pongWord;
         }
-      }
-      pingPongIt(resultArray);
-    }
-
-    var pingPongIt = function(resultArray){
-      for(var i = 0; i < resultArray.length; i++){
         if(i  % pingPongNum === 0){
           resultArray[i] = pingPongWord;
         }
@@ -44,8 +32,6 @@
       resultArray = resultArray.shift();
       return resultArray;
     }
-
-
 
   // *********************FRONT END LOGIC*************************
   $(function() {
@@ -73,7 +59,6 @@
       $("form").hide();
       $("#resultsContainer").show();
     });
-
 
     //reload button function
     $("#reload").click(function(){
