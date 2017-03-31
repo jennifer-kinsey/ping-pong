@@ -4,9 +4,11 @@
     var pingNum = 3;
     var pongNum = 5;
     var pingPongNum = 15;
+    var defaultLength = 20;
     var pingWord = "ping";
     var pongWord = "pong";
     var pingPongWord = pingWord + "-" + pongWord;
+
 
     var makeArray = function(input){
       for(var i = 0; i <= input; i++){
@@ -77,12 +79,6 @@
       location.reload();
     });
 
-    //change words button function
-    $("#change").click(function(){
-      $("#main").hide();
-      $("#secondary").show();
-    });
-
     //change of ping number handler
     $("#ping").change(function(){
       pingNum = parseInt($("#ping").val());
@@ -98,15 +94,19 @@
     });
 
     //change of ping word handler
-    $("#pingWord").change(function(){
-      pingWord = $("ping-word").val();
+    $("#ping-word").change(function(){
+      pingWord = $("#ping-word").val();
+      pingPongWord =  pingWord + "-" + pongWord;
       $("#ping-word-fill").text(pingWord);
+      $("#ping-pong-word-fill").text(pingPongWord)
     });
 
     //change of pong word handler
-    $("#pongWord").change(function(){
-      pongWord = $("pong-word").val();
+    $("#pong-word").change(function(){
+      pongWord = $("#pong-word").val();
+      pingPongWord =  pingWord + "-" + pongWord;
       $("#pong-word-fill").text(pongWord);
+      $("#ping-pong-word-fill").text(pingPongWord);
     });
 
 
