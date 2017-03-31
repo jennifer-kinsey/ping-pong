@@ -48,9 +48,14 @@
     //submit form function
     $("form").submit(function(e) {
       e.preventDefault();
-      var userInput = parseInt($("#userInput").val());
+      var userInput = $("#userInput").val();
 
-      makeArray(userInput);
+      if(userInput.match(/\D/)){
+        $(".alert").append("Please try again and enter in only a numerical value.")
+        $("p").hide();
+      }else{
+        makeArray(parseInt(userInput));
+      }
 
       $("#ping-pong-result").text(resultArray);
 

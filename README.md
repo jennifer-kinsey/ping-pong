@@ -27,6 +27,10 @@ _4) If a number is divisible by 15, it will return the word "ping-pong"_
 * _Input: 17_
 * _Output: ...14, ping-pong, 16, 17_
 
+_5) A non-numerical input is rejected
+* _Input: 17A, jhf_
+* _Output: Please try again with a numerical value_
+
 
 ## Setup/Installation Requirements
 
