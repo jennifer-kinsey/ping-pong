@@ -98,16 +98,16 @@
     $("#ping-word").change(function(){
       pingWord = $("#ping-word").val();
       pingPongWord =  pingWord + "-" + pongWord;
-      $("#ping-word-fill").text(pingWord);
-      $("#ping-pong-word-fill").text(pingPongWord)
+      $(".ping-word-fill").text(pingWord);
+      $(".ping-pong-word-fill").text(pingPongWord)
     });
 
     //change of pong word handler
     $("#pong-word").change(function(){
       pongWord = $("#pong-word").val();
       pingPongWord =  pingWord + "-" + pongWord;
-      $("#pong-word-fill").text(pongWord);
-      $("#ping-pong-word-fill").text(pingPongWord);
+      $(".pong-word-fill").text(pongWord);
+      $(".ping-pong-word-fill").text(pingPongWord);
     });
 
 
