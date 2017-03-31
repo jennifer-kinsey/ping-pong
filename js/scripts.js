@@ -57,7 +57,7 @@
         userInput = $("#userInput").val();
       }
 
-      if(userInput.match(/\D/) || userInput ===""){
+      if(userInput.match(/\D/)){
         $(".alert").append("Please try again and enter in only a numerical value.")
         $("#ping-pong-container").hide();
       }else{

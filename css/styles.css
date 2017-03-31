@@ -1,32 +1,29 @@
-#resultsContainer {
-  display: none;
-}
-
-.alert {
-  color: red;
-}
-
 h1, h2 {
   text-align: center;
 }
-
-#heading{
-  color: white;
-}
-
 
 li {
   line-height: 1.5em;
   padding: 5px;
 }
 
+.alert {
+  color: red;
+}
+
 .jumbotron {
   background-image: url("../img/table.jpg");
+}
+
+.jumbotron, .btn{
   display: block;
   margin: 0 auto;
 }
 
-.btn{
-  display: block;
-  margin: 0 auto;
+#resultsContainer {
+  display: none;
+}
+
+#heading{
+  color: white;
 }
