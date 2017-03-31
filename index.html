@@ -15,14 +15,23 @@
     </div>
     <div class="container">
       <form>
-        <h3>Type here:</h3>
+        <h2>Let's Play PING PONG!</h2>
+        <h3>Rules:</h3>
+        <ol>
+          <li>Numbers divisible by this number become "ping":  <input type="number" id="ping" placeholder="3"> </li>
+          <li>Numbers divisible by this number become "ping":  <input type="number" id="ping" placeholder="3"> </li>
+          <li>Numbers divisible by 15 become "ping-pong"</li>
+        </ol>
         <input type="text" id="userInput"><br>
         <button type="submit" class="btn btn-info">Submit</button>
       </form>
-      <div id="result">
+      <div id="resultsContainer">
         <h3>Ping Pong Result</h3>
         <h4 class="alert"></h4>
-        <p> Your result is: <span id="ping-pong-result"></span></p>
+          <div id="ping-pong-container">
+            <p> Your result is:</p>
+            <ul id="ping-pong-result"></ul>
+          </div>
         <button type="click" class="btn btn-danger" id="reload">RELOAD!</button>
       </div>
     </div>

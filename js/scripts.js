@@ -52,15 +52,19 @@
 
       if(userInput.match(/\D/)){
         $(".alert").append("Please try again and enter in only a numerical value.")
-        $("p").hide();
+        $("#ping-pong-container").hide();
       }else{
         makeArray(parseInt(userInput));
       }
 
-      $("#ping-pong-result").text(resultArray);
+      for(var i = 0; i < resultArray.length; i++){
+        resultArray[i] = "<li>" + resultArray[i] + "</li>"
+      }
+
+      $("#ping-pong-result").append(resultArray);
 
       $("form").hide();
-      $("#result").show();
+      $("#resultsContainer").show();
     });
 
 
